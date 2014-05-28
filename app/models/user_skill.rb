@@ -1,0 +1,3 @@
+class UserSkill
+
+end
