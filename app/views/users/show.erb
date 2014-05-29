@@ -1,0 +1,10 @@
+<h1><%= current_user.First %></h1>
+
+<% @projects.each do |project| %>
+  <div class="project">
+    <h3><a href="/projects/<%= project.id %>"><%= project.name %></a> 
+    <p>
+      <%= project.description %>
+    </p>
+  </div>
+<% end %>

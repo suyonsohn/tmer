@@ -28,6 +28,11 @@ post '/logout' do
   redirect '/'
 end
 
+get '/users/show' do
+  @projects = current_user.projects
+  erb :'users/show'
+end
+
 get '/project/new' do
   @skills = Skill.all
   erb :'/project/new'
