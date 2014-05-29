@@ -27,3 +27,8 @@ post '/logout' do
   session[:user_id] = nil
   redirect '/'
 end
+
+get '/project/new' do
+  @skills = Skill.all
+  erb :'/project/new'
+end
