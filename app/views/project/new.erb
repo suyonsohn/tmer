@@ -1,0 +1,34 @@
+<h1>Create Your Project</h1>
+
+<form method="post" action="/create_project">
+  <div>
+    <label>Name</label>
+    <input type="text" name="name">
+  </div>
+
+  <div>
+    <label>Description</label>
+    <input type="password" name="password">
+  </div>
+
+  <div>
+    <label>Required Skills</label>
+    <% @skills.each do |skill| %>
+    <input type="checkbox" name="skills">
+    <label><%= skill.name %></label>
+      
+
+    <% end %>
+  </div>
+
+  <div>
+    <label>Number of Team Members</label>
+    <input type="number" name="number">
+  </div>
+
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+
+</form>
+
