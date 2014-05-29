@@ -1,1 +1,23 @@
-<h1>Home Page</h1>
+<h1>TMer</h1>
+
+<% if !current_user %>
+<form method="post" action="/">
+  <div>
+    <label>Email</label>
+    <input type="text" name="email">
+  </div>
+
+  <div>
+    <label>Password</label>
+    <input type="password" name="password">
+  </div>
+
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+
+</form>
+<% else %>
+ Welcome <%= current_user.first_name %>
+ 
+<% end %>

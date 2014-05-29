@@ -18,6 +18,12 @@
   <title></title>
 </head>
 <body>
+  <% if current_user %>
+    Welcome <%= current_user.email %>,
+    <form method="post" action="/logout">
+      <input type="submit" value="Logout">
+    </form>
+  <% end %>
   <%= yield %>
 </body>
 </html>
