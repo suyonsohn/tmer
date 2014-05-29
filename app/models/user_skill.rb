@@ -1,3 +1,3 @@
-class UserSkill
+class UserSkill < ActiveRecord::Base
 
 end

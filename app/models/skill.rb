@@ -1,3 +1,5 @@
-class Skill
+class Skill < ActiveRecord::Base
+
+  has_many :projects
 
 end
