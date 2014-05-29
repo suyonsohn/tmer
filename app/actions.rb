@@ -27,3 +27,8 @@ post '/logout' do
   session[:user_id] = nil
   redirect '/'
 end
+
+get '/users/show' do
+  @projects = current_user.projects
+  erb :'users/show'
+end
