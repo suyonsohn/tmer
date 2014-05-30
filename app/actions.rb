@@ -36,6 +36,7 @@ end
 
 post '/users/show/:id' do
   # binding.pry
+  UserSkill.where(user_id: current_user.id)
   on_boxes = params.select{|k,v| v == "on"}
   on_boxes.each_key do |key|
     UserSkill.create(user_id: current_user.id, skill_id: key.to_s)
