@@ -19,7 +19,7 @@
 </head>
 <body>
   <% if current_user %>
-    Welcome <a href="/users/show/"> <%= current_user.email %>,
+    Welcome <a href="/users/show/<%=  current_user.id %>"> <%= current_user.first_name %></a>
     <form method="post" action="/logout">
       <input type="submit" value="Logout">
     </form>

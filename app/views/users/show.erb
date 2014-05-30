@@ -1,4 +1,4 @@
-<h1><%= current_user.First %></h1>
+<h1><%= current_user.first_name %></h1>
 
 <% @projects.each do |project| %>
   <div class="project">
@@ -8,3 +8,12 @@
     </p>
   </div>
 <% end %>
+
+<form method="post" action="/users/show/<%= current_user.id %>">
+  <% @skills. each do |skill| %>
+  <label><%= skill.name %></label>
+    <input type="checkbox" name="<%= skill.id %>">
+  <% end %>
+  <input type="submit" value="submit">
+</form>
+
