@@ -28,9 +28,19 @@ post '/logout' do
   redirect '/'
 end
 
-get '/users/show' do
+get '/users/show/:id' do
+  @skills = Skill.all
   @projects = current_user.projects
   erb :'users/show'
+end
+
+post '/users/show/:id' do
+  # binding.pry
+  on_boxes = params.select{|k,v| v == "on"}
+  on_boxes.each_key do |key|
+    UserSkill.create(user_id: current_user.id, skill_id: key.to_s)
+  end
+  redirect "users/show/#{params[:id]}"
 end
 
 get '/project/new' do
@@ -45,29 +55,6 @@ post '/project/new' do
 
   erb :'/project/match'
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
