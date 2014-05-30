@@ -39,7 +39,7 @@ end
 
 post '/users/show/:id' do
   # binding.pry
-  UserSkill.where(user_id: current_user.id)
+  UserSkill.where(user_id: current_user.id).destroy_all
   on_boxes = params.select{|k,v| v == "on"}
   on_boxes.each_key do |key|
     UserSkill.create(user_id: current_user.id, skill_id: key.to_s)
@@ -65,13 +65,46 @@ post '/project/new' do
   checked_boxes.each_key do |key|
     ProjectSkill.create(project_id: project.id, skill_id: key.to_s)
   end
-  binding.pry
+  redirect '/project/match'
+end
 
+get '/project/match' do
+  users = User.all
+
+  available_skill_ids = available_skill_ids(users)
+  project_skill_ids = current_project.skills.pluck(:skill_id)
+  project_skill_ids = project_skill_ids.select{|s| available_skill_ids.include?(s)} #gets rid of ids that no user has
+  @matches = []
+
+  while !project_skill_ids.empty? && !available_skill_ids.empty?
+    match = find_user_with_most_matches(users, project_skill_ids)
+    # if !match then break end
+    @matches << match
+    project_skill_ids = project_skill_ids - match.skills.pluck(:id)
+    users = users.where.not(id: match.id)
+    available_skill_ids = available_skill_ids(users)
+  end
+
+  # binding.pry
   erb :'/project/match'
 end
 
+def available_skill_ids(users)
+  users.collect {|u| u.skills.pluck(:id)}.flatten.uniq 
+end
 
-
+def find_user_with_most_matches(users, skill_id_arr)
+  max_skills_owner = nil
+  max_skills = 0
+  users.each do |user|
+    current = user.skills.where(id: [skill_id_arr]).count
+    if current > max_skills
+      max_skills = current
+      max_skills_owner = user
+    end
+  end
+  return max_skills_owner
+end
 
 
 
