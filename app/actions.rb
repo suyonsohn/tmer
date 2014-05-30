@@ -4,6 +4,9 @@ helpers do
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+  def current_project
+    @current_project ||= Project.find(session[:project_id]) if session[:project_id]
+  end
 end
 
 get '/' do
@@ -48,3 +51,33 @@ get '/project/new' do
   @skills = Skill.all
   erb :'/project/new'
 end
+
+post '/project/new' do
+  checked_boxes = params.select { |k, v| v == "on"}
+
+  project = Project.create(
+    name: params[:name],
+    description: params[:description],
+    team_size: params[:team_size],
+    user_id: current_user.id
+    )
+  session[:project_id] = project.id
+  checked_boxes.each_key do |key|
+    ProjectSkill.create(project_id: project.id, skill_id: key.to_s)
+  end
+  binding.pry
+
+  erb :'/project/match'
+end
+
+
+
+
+
+
+
+
+
+
+
+

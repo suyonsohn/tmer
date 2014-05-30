@@ -1,6 +1,6 @@
 <h1>Create Your Project</h1>
 
-<form method="post" action="/create_project">
+<form method="post" action="/project/new">
   <div>
     <label>Name</label>
     <input type="text" name="name">
@@ -8,13 +8,13 @@
 
   <div>
     <label>Description</label>
-    <input type="password" name="password">
+    <input type="text" name="description">
   </div>
 
   <div>
     <label>Required Skills</label>
     <% @skills.each do |skill| %>
-    <input type="checkbox" name="skills">
+    <input type="checkbox" name="<%= skill.id %>">
     <label><%= skill.name %></label>
       
 
@@ -23,11 +23,11 @@
 
   <div>
     <label>Number of Team Members</label>
-    <input type="number" name="number">
+    <input type="number" name="team_size">
   </div>
 
   <div>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Find Team!">
   </div>
 
 </form>
