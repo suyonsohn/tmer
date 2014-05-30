@@ -14,7 +14,7 @@
   <div>
     <label>Required Skills</label>
     <% @skills.each do |skill| %>
-    <input type="checkbox" name="skills">
+    <input type="checkbox" name="<%= skill.id %>">
     <label><%= skill.name %></label>
       
 

@@ -39,7 +39,44 @@ get '/project/new' do
 end
 
 post '/project/new' do
- 
+  @params = params
+  # @params[:skill] = ProjectSkill.skill_id
+  binding.pry
 
   erb :'/project/match'
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
