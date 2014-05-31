@@ -4,6 +4,10 @@ padding: 15px;
 margin: 0 auto;
 }
 
+h1 {
+  font-size: 4em;
+}
+
 #new_project_btn{
   margin-top: 150px;
 
@@ -21,8 +25,9 @@ body{
 
 .signin_box {
   background: rgba(255, 255, 255, 0.5);
-  width: 500px;
+  width: 400px;
   margin: 80px auto;
+  border-radius: 5px;
 }
 
 .signin_box input {
