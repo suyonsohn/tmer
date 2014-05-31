@@ -12,6 +12,9 @@ margin: 0 auto;
 body{
   /*background-image: url('/images/clouds.jpg');*/
   background-image: url('/images/background-gradient.jpg');
+  background-image: url('http://garrisonhullinger.com/wp-content/uploads/2013/12/back_office_reverse_IMG_0145.jpg');
+  /*background-position:center; */
+  background-size: cover;
 
 }
 
