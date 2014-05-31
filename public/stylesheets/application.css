@@ -3,3 +3,18 @@ max-width: 330px;
 padding: 15px;
 margin: 0 auto;
 }
+
+#new_project_btn{
+  margin-top: 150px;
+
+}
+
+body{
+  /*background-image: url('/images/clouds.jpg');*/
+  background-image: url('/images/background-gradient.jpg');
+
+}
+
+div, .main{
+  margin-top: 50px;
+}
