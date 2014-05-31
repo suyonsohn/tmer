@@ -15,6 +15,23 @@ end
 
 #Login ===========================================
 
+get '/sign_up' do
+  erb :sign_up
+end
+
+post '/sign_up' do
+  User.create(
+    email: params[:email], 
+    password: params[:password], 
+    first_name: params[:first_name],
+    last_name: params[:last_name],
+    git_username: params[:git_username],
+    password: params[:password]
+  )
+  session[:user_id] = User.last.id
+  redirect '/'
+end
+
 post '/' do
   @user = User.find_by(email: params[:email], password: params[:password])
 
