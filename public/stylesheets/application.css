@@ -18,6 +18,7 @@ body{
   /*background-image: url('/images/background-gradient.jpg');*/
   background-image: url('http://garrisonhullinger.com/wp-content/uploads/2013/12/back_office_reverse_IMG_0145.jpg');
   background-size: cover;
+
   
 
 
@@ -26,7 +27,7 @@ body{
 .signin_box {
   background: rgba(255, 255, 255, 0.5);
   width: 400px;
-  margin: 80px auto;
+  margin: 60px auto;
   border-radius: 5px;
 }
 

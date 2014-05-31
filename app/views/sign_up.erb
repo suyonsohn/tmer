@@ -1,37 +1,28 @@
-<h1>Sign Up</h1>
+<!-- <h1>Sign Up</h1> -->
 
 <% if !current_user %>
-<form class="form-signin" method="post" action="/sign_up">
-  <div>
-    <label>First Name</label>
-    <input type="text" name="first_name">
+  <div class="signin_box">
+    <form class="form-signin" role="form" method="post" action="/sign_up">
+      <h1>Tmer</h1>
+      <h2 class="form-signin-heading">Build your dev team</h2>  
+      <label>First Name</label>
+      <input type="text" name="first_name" class="form-control" placeholder="first name" required autofocus>
+  
+      <label>Last Name</label>
+      <input type="text" name="last_name" class="form-control" placeholder="last name" required autofocus>
+    
+      <label>Github Username</label>
+      <input type="text" name="git_username" class="form-control" placeholder="github username" required autofocus>
+        
+      <label>Email</label>
+      <input type="text" name="email" class="form-control" placeholder="email" required autofocus>
+      
+      <label>Password</label>
+      <input type="password" name="password" class="form-control" placeholder="password" required autofocus>
+    
+      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign Up">  
+    </form>
   </div>
-
-    <div>
-    <label>Last Name</label>
-    <input type="text" name="last_name">
-  </div>
-
-  <div>
-    <label>Github Username</label>
-    <input type="text" name="git_username">
-  </div>
-
-  <div>
-    <label>Email</label>
-    <input type="text" name="email">
-  </div>
-
-  <div>
-    <label>Password</label>
-    <input type="password" name="password">
-  </div>
-
-  <div>
-    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Submit">
-  </div>
-
-</form>
 <% else %>
  Welcome <%= current_user.first_name %>
  <a href="project/new">Create A Project!</a>
