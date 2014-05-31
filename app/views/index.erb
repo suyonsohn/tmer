@@ -1,26 +1,23 @@
-<h1>TMer</h1>
+    <div class="container">
+    
 
-<% if !current_user %>
-<form method="post" action="/">
-  <div>
-    <label>Email</label>
-    <input type="text" name="email">
-  </div>
+    <% if !current_user %>
+      <form class="form-signin" role="form" method="post" action="/">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input name="email" type="email" class="form-control" placeholder="Email address" required autofocus>
+        <input name="password"  type="password" class="form-control" placeholder="Password" required>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    <% else %>
 
-  <div>
-    <label>Password</label>
-    <input type="password" name="password">
-  </div>
 
-  <div>
-    <input type="submit" value="Submit">
-  </div>
-</form>
-<% else %>
- Welcome <%= current_user.first_name %>
- <a href="project/new">Create A Project!</a>
-<% end %>
+      <div class="col-md-6 col-md-offset-3">
+      <a href="project/new" class="btn btn-primary btn-lg btn-block btn-success ">Create A Project!</a>
+      </div>
+    <% end %>
+    </div> 
 
-<% if !current_user %>
-  <a href="/sign_up">Sign up now!</a>
-<% end %>
+    
+
+    
