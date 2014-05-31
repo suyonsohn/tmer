@@ -11,13 +11,26 @@ margin: 0 auto;
 
 body{
   /*background-image: url('/images/clouds.jpg');*/
-  background-image: url('/images/background-gradient.jpg');
+  /*background-image: url('/images/background-gradient.jpg');*/
   background-image: url('http://garrisonhullinger.com/wp-content/uploads/2013/12/back_office_reverse_IMG_0145.jpg');
-  /*background-position:center; */
   background-size: cover;
+  
+
 
 }
 
-div, .main{
+.signin_box {
+  background: rgba(255, 255, 255, 0.5);
+  width: 500px;
+  margin: 80px auto;
+}
+
+.signin_box input {
+  margin-bottom: 15px;
+
+
+}
+
+div.main{
   margin-top: 50px;
 }
