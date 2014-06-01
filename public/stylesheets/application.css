@@ -17,6 +17,20 @@ body{
   background-size: cover;
 }
 
+div.max{
+  /*background: url('/public/images/cream_dust.png') repeat 0 0;*/
+  /*background-color: white;*/
+  background-color:rgba(255,255,255,0.95);
+  /*position: fixed;*/
+  /*top:0;*/
+  /*height: 1774px;*/
+}
+
+div.main{
+  margin-top: 50px;
+  height: 1500px;
+}
+
 .homepage-background {
   background-image: url('/images/back_office_reverse_IMG_0145.jpg');
   background-size: cover;
@@ -43,10 +57,7 @@ body{
   margin-bottom: 15px;
 }
 
-div.main{
-  margin-top: 50px;
-  height: 1500px;
-}
+
 
 .profile_pic{
   height: 150px;
@@ -61,14 +72,7 @@ div.main{
   margin: 10px;
 }
 
-div.max{
-  /*background: url('/public/images/cream_dust.png') repeat 0 0;*/
-  /*background-color: white;*/
-  background-color:rgba(255,255,255,0.95);
-  /*position: fixed;*/
-  /*top:0;*/
-  /*height: 1774px;*/
-}
+
 label{
   font-size: 1.2em;
 }
@@ -88,12 +92,9 @@ input[type=checkbox]{
 div.project{
 }
 
-
 .btn.btn-primary.btn-success.project {
   margin: 20px;
-
 }
-
 
 div.skill_list{
   margin-top: 50px;
@@ -104,6 +105,8 @@ div.email{
 a.email{
   width: 150px;
 }
+
+
 
 
 
