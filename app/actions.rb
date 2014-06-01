@@ -10,13 +10,13 @@ helpers do
 end
 
 get '/' do
-  erb :index
+  erb :index, layout: :'homepage'
 end
 
 #Login ===========================================
 
 get '/sign_up' do
-  erb :sign_up
+  erb :sign_up, layout: :'homepage'
 end
 
 post '/sign_up' do
