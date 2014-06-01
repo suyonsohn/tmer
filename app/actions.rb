@@ -54,8 +54,20 @@ get '/users/show/:id' do
   erb :'users/show'
 end
 
+get '/project/show/:id' do
+  session[:project_id] = params[:id]
+  @skills = Skill.all
+  erb :'project/show'
+end
+
+#=============================================================================================
+post '/project/show/:id' do
+  session[:project_id] = params[:id]
+  @skills = Skill.all
+  erb :'project/show'
+end
+
 post '/users/show/:id' do
-  # binding.pry
   UserSkill.where(user_id: current_user.id).destroy_all
   on_boxes = params.select{|k,v| v == "on"}
   on_boxes.each_key do |key|
@@ -66,21 +78,23 @@ end
 
 get '/project/new' do
   @skills = Skill.all
+  session[:project_id] = nil
   erb :'/project/new'#, layout: :'project'
 end
 
 post '/project/new' do
   checked_boxes = params.select { |k, v| v == "on"}
-
-  project = Project.create(
-    name: params[:name],
-    description: params[:description],
-    team_size: params[:team_size],
-    user_id: current_user.id
-    )
-  session[:project_id] = project.id
-  checked_boxes.each_key do |key|
-    ProjectSkill.create(project_id: project.id, skill_id: key.to_s)
+  if !current_project
+    project = Project.create(
+      name: params[:name],
+      description: params[:description],
+      team_size: params[:team_size],
+      user_id: current_user.id
+      )
+    session[:project_id] = project.id
+    checked_boxes.each_key do |key|
+      ProjectSkill.create(project_id: project.id, skill_id: key.to_s)
+    end
   end
   redirect '/project/match'
 end

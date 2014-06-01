@@ -1,5 +1,5 @@
 
-<h2 class="header"><span></span><span><%= current_project[:name] %></span> </h2>
+<h2 class="header"><a href="/project/show/<%= current_project.id %>"><%= current_project.name %></a></h2>
 
 <h3>Your Team</h3>
 <% @matches.each do |user| %>
