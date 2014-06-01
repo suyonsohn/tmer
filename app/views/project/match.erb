@@ -1,13 +1,15 @@
 <h1>Candidates for your next team!</h1>
 
-
 <h2><span>Project: </span><span><%= current_project[:name] %></span> </h2>
 
+<h3>Your Team</h3>
 <% @matches.each do |user| %>
+  <img class="profile_pic"  src="<%= user.picture %>">  
+    
   <h2><%= user.first_name %></h2>
   <% user.skills.each do |skill|%>
     <small> <%= skill.name %>, </small>
-  <% end %>
+  <% end %><p></p>
 <% end %>
 
 
