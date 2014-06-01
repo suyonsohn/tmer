@@ -1,3 +1,4 @@
+
 class User < ActiveRecord::Base
   has_many :projects
   has_many :user_skills  
@@ -9,5 +10,11 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true
   validates :password, presence: true
   # validates :git_username, presence: true
+
+  def picture
+    url = 'https://github.com/' << self.git_username
+    doc = Nokogiri::HTML(open(url))
+    doc.search('.avatar').attr('src')
+  end
   
 end
