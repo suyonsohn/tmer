@@ -1,24 +1,22 @@
-    <div class="container">
+
     
 
-    <% if !current_user %>
-      <div class="signin_box">
-      <form class="form-signin" role="form" method="post" action="/">
-        <h1>Tmer</h1>
-        <h2 class="form-signin-heading">Build your team now</h2>
-        <input name="email" type="email" class="form-control" placeholder="Email address" required autofocus>
-        <input name="password"  type="password" class="form-control" placeholder="Password" required>
-        
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
-      </div>
-    <% else %>
+  <div class="signin_box">
+    <form class="form-signin" role="form" method="post" action="/">
+      <h1>t_mer</h1>
+      <h2 class="form-signin-heading">Build your dev team</h2>
+      <input name="email" type="email" class="form-control" placeholder="Email address" required autofocus>
+      <input name="password"  type="password" class="form-control" placeholder="Password" required>   
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    
+    <!-- <h3 class="form-signin-heading">not a t_mer yet?</h3>  -->
 
+      <a href="/sign_up" class="btn btn-lg btn-success btn-block" role="button">Sign up</a>
+      
+      <!-- <button class="btn btn-lg btn-success btn-block" type="submit">Sign up</button>   -->
+    </form>
+  </div>
 
-      <div class="col-md-6 col-md-offset-3">
-      <a href="project/new" id="new_project_btn" class="btn btn-primary btn-lg btn-block btn-success ">Create A Project!</a>
-      </div>
-    <% end %>
     </div> 
   
 
