@@ -102,7 +102,6 @@ get '/project/match' do
     available_skill_ids = available_skill_ids(users)
   end
 
-  # binding.pry
   erb :'/project/match'
 end
 
