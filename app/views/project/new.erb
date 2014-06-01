@@ -1,23 +1,28 @@
 <!-- <div class="page-header"> -->
-  <h1>Create Your Project</h1>
+<h1>Create Your Project</h1>
 <!-- </div> -->
 
 
 <div class="col-md-12">
-<div class="project_box">
-  <form method="post" action="/project/new" class="form-signin" role="form">
-    <input type="text" name="name" class="form-control" placeholder="project name" required autofocus>
+  <div class="project_box">
+    <form method="post" action="/project/new">
+      <input type="text" name="name" class="form-control" placeholder="project name" required autofocus>
 
-    <textarea type="text" name="description" class="form-control" placeholder="project description" rows="3" required autofocus></textarea>
+      <textarea type="text" name="description" class="form-control" placeholder="project description" rows="3" required autofocus></textarea>
 
-    <p></p>
-    <h2 class="header">Required Skills</h2>
-    <label>
+      
+      <h2 class="header">Required Skills</h2>
+      <div class="col-md-12"> 
+    
       <% @skills.each do |skill| %>
+      <div class="col-md-4">
         <input type="checkbox" name="<%= skill.id %>">
         <label><%= skill.name %></label>
+        </div>
       <% end %>
-    </label>
+    
+      </div>
+    
 
     <label>Ideal Team Size</label>
     <input type="number" name="team_size" class="form-control">
@@ -25,5 +30,6 @@
     <input class="btn btn-lg btn-success btn-block" type="submit" value="Find Team!">  
 
   </form>
+</div>
 </div>
 
