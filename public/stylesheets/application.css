@@ -89,9 +89,21 @@ input[type=checkbox]{
 div.project{
 }
 
+
 .btn.btn-primary.btn-success.project {
   margin: 20px;
 
+}
+
+
+div.skill_list{
+  margin-top: 50px;
+}
+div.email{
+  margin-top: 70px;
+}
+a.email{
+  width: 150px;
 }
 
 
