@@ -37,7 +37,7 @@ post '/' do
 
   if @user
     session[:user_id] = @user.id
-    redirect '/project/new'
+    redirect "/users/show/#{session[:user_id]}"
   else
     erb :'auth/login'
   end
