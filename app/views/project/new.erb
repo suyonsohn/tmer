@@ -1,30 +1,23 @@
-<h1>Create Your Project</h1>
+<div class="signin_box">
+  <form method="post" action="/project/new" class="form-signin" role="form">
+    <h2 class="form-signin-heading">Create Your Project</h2>
 
-<form method="post" action="/project/new">
-  <div>
-    <label>Name</label>
-    <input type="text" name="name">
-  </div>
+    <input type="text" name="name" class="form-control" placeholder="project name" required autofocus>
 
-  <div>
-    <label>Description</label>
-    <input type="text" name="description">
-  </div>
+    <textarea type="text" name="description" class="form-control" placeholder="project description" rows="3" required autofocus></textarea>
 
-  <div>
+    <p></p>
     <label>Required Skills</label>
-    <% @skills.each do |skill| %>
-    <input type="checkbox" name="<%= skill.id %>">
-    <label><%= skill.name %></label>
-      
+    <label>
+      <% @skills.each do |skill| %>
+        <input type="checkbox" name="<%= skill.id %>">
+        <label><%= skill.name %></label>
+      <% end %>
+    </label>
 
-    <% end %>
-  </div>
+    <label>Ideal Team Size</label>
+    <input type="number" name="team_size" class="form-control">
 
-  <div>
-    <label>Number of Team Members</label>
-    <input type="number" name="team_size">
-  </div>
 
   <div>
     <input type="submit" value="Find Team!">
