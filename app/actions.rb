@@ -66,7 +66,7 @@ end
 
 get '/project/new' do
   @skills = Skill.all
-  erb :'/project/new', layout: :'project'
+  erb :'/project/new'#, layout: :'project'
 end
 
 post '/project/new' do

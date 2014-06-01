@@ -14,12 +14,11 @@ h1 {
 }
 
 body{
-  /*background-image: url('/images/clouds.jpg');*/
-  /*background-image: url('/images/background-gradient.jpg');*/
-  
+  background-image: url('/images/back_office_reverse_IMG_0145.jpg');
+  background-size: cover;
 }
 .homepage-background {
-  background-image: url('http://garrisonhullinger.com/wp-content/uploads/2013/12/back_office_reverse_IMG_0145.jpg');
+  background-image: url('/images/back_office_reverse_IMG_0145.jpg');
   background-size: cover;
 }
 
@@ -47,6 +46,7 @@ body{
 
 div.main{
   margin-top: 50px;
+  height: 1500px;
 }
 
 .profile_pic{
@@ -61,4 +61,44 @@ div.main{
 .nav>li>a {
   margin: 10px;
 }
+
+div.max{
+  /*background: url('/public/images/cream_dust.png') repeat 0 0;*/
+  /*background-color: white;*/
+  background-color:rgba(255,255,255,0.95);
+  /*position: fixed;*/
+  /*top:0;*/
+  /*height: 1774px;*/
+}
+label{
+  font-size: 1.2em;
+}
+
+div.skills{
+  margin-top: 50px;
+}
+
+h2.header{
+  border-bottom: 1px solid black;
+}
+input[type=checkbox]{
+  height: 1.2em;
+  width: 1.2em;
+}
+
+div.project{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 

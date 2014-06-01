@@ -16,6 +16,7 @@
     <title>Tmer</title>
   </head>
   <body>
+  <div class="max col-md-10 col-md-offset-1">
     <div class="main col-md-10 col-md-offset-1">
       <% if current_user %>
         <ul class="nav nav-pills pull-right">
@@ -24,6 +25,7 @@
         </ul>
       <% end %>
       <%= yield %>
+    </div>
     </div>
   </body>
 </html>
