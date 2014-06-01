@@ -29,7 +29,7 @@ post '/sign_up' do
     password: params[:password]
   )
   session[:user_id] = User.last.id
-  redirect '/'
+  redirect "/users/show/#{current_user[:id]}"
 end
 
 post '/' do
