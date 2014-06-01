@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  <link rel="stylesheet" href="/stylesheets/normalize.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="/stylesheets/application.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
 
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/javascript/application.js"></script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/javascript/application.js"></script>
+    <link href="signin.css" rel="stylesheet">
 
-  <link href="signin.css" rel="stylesheet">
-
-  <title>Tmer</title>
-</head>
-<body class="homepage-background">
-  <div class="main col-md-10 col-md-offset-1">
+    <title>t_mer</title>
+  </head>
+  <body>
+  <!-- <div class="main col-md-10 col-md-offset-1"> -->
     <% if current_user %>
       <ul class="nav nav-pills pull-right">
         <li class="active"><a href="/users/show/<%=  current_user.id %>"><%= current_user.first_name %></a></li>
@@ -25,6 +24,6 @@
       </ul>
     <% end %>
     <%= yield %>
-  </div>
-</body>
+  <!-- </div> -->
+  </body>
 </html>
