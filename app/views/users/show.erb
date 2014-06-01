@@ -17,9 +17,16 @@
 <div class="col-md-12"> 
 <form method="post" action="/users/show/<%= current_user.id %>">
   
-  <% @skills. each do |skill| %>
+  <% @skills.each do |skill| %>
+
+    <% 
+    if current_user.skills.pluck(:id).include?(skill.id)
+      @checked = "checked"
+    else
+      @checked = ""
+    end %>
     <div class="col-md-4">
-      <input type="checkbox" name="<%= skill.id %>">
+      <input type="checkbox" name="<%= skill.id %>"<%= @checked %>>
       <label><%= skill.name %></label>
     </div>
   <% end %>
