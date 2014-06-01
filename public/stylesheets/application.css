@@ -16,6 +16,7 @@ h1 {
 body{
   /*background-image: url('/images/clouds.jpg');*/
   /*background-image: url('/images/background-gradient.jpg');*/
+  
 }
 .homepage-background {
   background-image: url('http://garrisonhullinger.com/wp-content/uploads/2013/12/back_office_reverse_IMG_0145.jpg');
@@ -31,10 +32,26 @@ body{
 
 .signin_box input {
   margin-bottom: 15px;
+}
 
+.project_box {
+  background: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  margin: 30px auto auto 30px;
+  border-radius: 5px;
+}
 
+.project_box input {
+  margin-bottom: 15px;
 }
 
 div.main{
   margin-top: 50px;
 }
+
+.project-background {
+  background-color: #5792B2;
+}
+
+
+

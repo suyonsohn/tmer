@@ -37,7 +37,7 @@ post '/' do
 
   if @user
     session[:user_id] = @user.id
-    redirect '/'
+    redirect '/project/new'
   else
     erb :'auth/login'
   end
@@ -66,7 +66,7 @@ end
 
 get '/project/new' do
   @skills = Skill.all
-  erb :'/project/new'
+  erb :'/project/new', layout: :'project'
 end
 
 post '/project/new' do
