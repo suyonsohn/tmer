@@ -106,6 +106,15 @@ a.email{
   width: 150px;
 }
 
+.pic {
+  height: 180px;
+}
+
+h1.pic {
+  text-align: left;
+  text-indent: 30px;
+}
+
 
 
 

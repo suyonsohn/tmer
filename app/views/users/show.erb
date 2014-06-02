@@ -1,4 +1,11 @@
-<h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+<div class="pic col-md-2">
+  <img class="profile_pic" src="<%= current_user.picture %>">
+  
+</div>
+
+<div class="pic col-md-10">
+  <h1 class="pic"><%= current_user.first_name %> <%= current_user.last_name %></h1>
+</div>
 
 <h2 class="header">Projects</h2>
 <div class="col-md-12">
