@@ -5,7 +5,7 @@
 
 <div class="col-md-12">
   <div class="project_box">
-    <form method="post" action="/project/new">
+    <form method="post" action="/project/show/<%= current_project.id %>">
       <!-- <input type="text" name="name" class="form-control" placeholder="project name" required autofocus> -->
 
       <textarea type="text" name="description" class="form-control" placeholder="project description" rows="3" required autofocus><%= current_project.description %></textarea>
@@ -32,11 +32,17 @@
 <!-- 
     <label>Ideal Team Size</label>
     <input type="number" name="team_size" class="form-control"> -->
-
-    <input class="btn btn-lg btn-success btn-block" type="submit" value="Find Team!">  
-
+    <div class="col-md-6">
+    
+    <input class="btn btn-lg btn-block btn-primary" type="submit" value="Update Project"> 
+    </div>
   </form>
-    <input class="btn btn-lg btn-block" type="submit" value="Update Project">  
+
+  <form method="get" action="/project/match">
+    <div class="col-md-6">
+    <input class="btn btn-lg btn-success btn-block" type="submit" value="Find Team!">     
+    </div>
+  </form>
 </div>
 </div>
 

@@ -62,9 +62,14 @@ end
 
 #=============================================================================================
 post '/project/show/:id' do
-  session[:project_id] = params[:id]
-  @skills = Skill.all
-  erb :'project/show'
+  # session[:project_id] = params[:id]
+  current_project.update(description: params[:description])
+  ProjectSkill.where(project_id: current_project.id).destroy_all
+  on_boxes = params.select{|k,v| v == "on"}
+  on_boxes.each_key do |key|
+    ProjectSkill.create(project_id: current_project.id, skill_id: key.to_s)
+  end
+  redirect "project/show/#{params[:id]}"  
 end
 
 post '/users/show/:id' do

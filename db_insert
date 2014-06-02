@@ -62,7 +62,3 @@ UserSkill.create(user_id: 6 , skill_id: 9)
 UserSkill.create(user_id: 6 , skill_id: 10)
 UserSkill.create(user_id: 6 , skill_id: 20)
 UserSkill.create(user_id: 6 , skill_id: 11)
-
-Project.create(name: "Lazer Shark", user_id: 1)
-Project.create(name: "Student profiler", user_id: 1)
-Project.create(name: "Teaching for Dummies Web App", user_id: 1)
