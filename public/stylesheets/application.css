@@ -21,14 +21,17 @@ div.max{
   /*background: url('/public/images/cream_dust.png') repeat 0 0;*/
   /*background-color: white;*/
   background-color:rgba(255,255,255,0.95);
-  /*position: fixed;*/
-  /*top:0;*/
+  /*position: auto;*/
+  top: 20px;
+  bottom: 20px;
+  padding: 40px;
+  border-radius: 10px;
   /*height: 1774px;*/
 }
 
 div.main{
-  margin-top: 50px;
-  height: 1500px;
+  /*margin-top: 50px;*/
+  /*height: 7000px;*/
 }
 
 .homepage-background {
@@ -114,19 +117,3 @@ h1.pic {
   text-align: left;
   text-indent: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

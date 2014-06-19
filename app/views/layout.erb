@@ -18,8 +18,8 @@
   <body>
   <div class="max col-md-10 col-md-offset-1">
     <div class="main col-md-10 col-md-offset-1">
+    <div class="col-md-12">
       <% if current_user %>
-        <div class="col-md-12">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="/users/show/<%=  current_user.id %>"><%= current_user.first_name %></a></li>
           <li><a href="/logout">Logout</a></li>
